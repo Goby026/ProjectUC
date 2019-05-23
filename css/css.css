@@ -13,7 +13,7 @@ padding: 20px;
 }
 h1,h2,h3,h4,h5,h6,p{
     margin: 0px;padding: 0px;
-   
+
 }
 h1{
     margin: 0px;padding: 0px;
@@ -26,13 +26,13 @@ h1{
     color: rgb(231, 229, 229);
     text-shadow:0px 4px 8px rgba(0,0,0,0.4);
     text-align: center;
-    
-    
+
+
 }
 
 h2{
     text-shadow:1px 1px 0 rgb(248, 245, 245);
-    
+
 }
 p{
     color: rgb(253, 253, 253);
@@ -58,7 +58,7 @@ nav ul li{
     transition: all 1s;
 }
 nav ul li:hover{
-    background: rgba(255,255,255,0,5);
+    background: rgba(255,255,255,0.5);
     text-align: center;
 }
 nav ul li a {
@@ -84,11 +84,11 @@ footer{
     float: right;
     margin-right: 0.1%;
     background-size: 100%;
-    
-    
 
 
-    
+
+
+
 }
 #contienebanner{
     padding: 2%;
@@ -139,7 +139,7 @@ footer{
 }
 aside {
     padding: 10px;
-    border: px solid black;
+    border: 0.1px solid black;
     width: 30%;
     float: right;
     height: 100%;
@@ -152,7 +152,7 @@ aside {
 }
 
 .button {
-    background-color: DodgerBlue; 
+    background-color: DodgerBlue;
     border: none;
     color: white;
     padding: 20px;
@@ -170,24 +170,24 @@ aside {
 .button5 {border-radius: 12px;}
 
 
-  
+
   video {
     width: 100%;
     height: auto;
   }
-  
+
   .row:after {
     content: "";
     clear: both;
     display: table;
   }
-  
+
   [class*="col-"] {
     float: left;
     padding: 15px;
     width: 100%;
   }
-  
+
   @media only screen and (min-width: 600px) {
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -202,7 +202,7 @@ aside {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
   }
-  
+
   @media only screen and (min-width: 768px) {
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -217,19 +217,19 @@ aside {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
-  
+
   html {
     font-family: "Lucida Sans", sans-serif;
   }
-  
 
-  
+
+
   .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .menu li {
     border-radius: 12px;
     padding: 8px;
@@ -238,12 +238,12 @@ aside {
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(241, 240, 240, 0.986), 0 1px 2px rgba(245, 245, 245, 0.24);
   }
-  
+
   .menu li:hover {
     background-color: #0099cc;
     border-radius: 12px;
   }
-  
+
   .aside {
     background-color: #33b5e5;
     padding: 15px;
@@ -252,7 +252,7 @@ aside {
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(252, 252, 252, 0.12), 0 1px 2px rgba(255, 254, 254, 0.24);
   }
-  
+
   .footer {
     background-color: #0099cc;
     color: #ffffff;
@@ -268,16 +268,16 @@ aside {
     width: 180px;
     background: rgba(237, 246, 247, 0.678);
   }
-  
+
 .gallery:hover {
     border: 1px solid #777;
   }
-  
+
 .gallery img {
     width: 100%;
     height: auto;
   }
-  
+
 .desc {
     padding: 15px;
     text-align: center;
@@ -324,7 +324,7 @@ aside {
 	display:block;
   }
   .button2 {
-    background-color: #008CBA; 
+    background-color: #008CBA;
     border: none;
     color: white;
     padding: 20px;
@@ -335,14 +335,14 @@ aside {
     margin: 4px 30px;
     cursor: pointer;
   }
-  
+
   .button2 span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
-  
+
   .button2 span:after {
     content: '\00bb';
     position: absolute;
@@ -351,11 +351,11 @@ aside {
     right: -20px;
     transition: 0.5s;
   }
-  
+
   .button2:hover span {
     padding-right: 25px;
   }
-  
+
   .button2:hover span:after {
     opacity: 1;
     right: 0;

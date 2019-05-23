@@ -4,34 +4,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='css/estilos1.css' type='text/css' /><!-- para estilos del contador -->
+    <link rel="stylesheet" href="./css/estilos1.css"><!-- para estilos del contador -->
 
 <!--    estilos de cada integrante-->
-    <link href="EstilosHome.css" rel="stylesheet" />
-    <link href="EstilosAuspiciadores.css" rel="stylesheet" />
-    <link href="EstilosLosJuegos.css" rel="stylesheet" />
+<!--    <link href="./estilos/EstilosHome.css" rel="stylesheet" />-->
+<!--    <link rel="stylesheet" href="./estilos/EstilosAuspiciadores.css">-->
+<!--    <link href="./estilos/EstilosLosJuegos.css" rel="stylesheet" />-->
+<!--    <link href="./estilos/EstilosInsti.css" rel="stylesheet" />-->
 
 
     <!-- Font Awesome -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
 
-    <link href="style.css" rel="stylesheet" />
+    <link href="./estilos/style.css" rel="stylesheet" />
 
-    <link rel="icon" type="" href="../img/icon_inicio.png"/>
+<!--    <link rel="stylesheet" href="./css/css.css" type="text/css">-->
+
+    <link rel="icon" type="" href="./img/icon_inicio.png"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <title>Weplay-Lima2019</title>
 
-    <script type="text/javascript">
-        $(document).ready(inicio)
-        function inicio() {
-            $("select").change(cambiacss)
-        }
-        function cambiacss() {
-            var plantilla = $("select").attr("value");
-            $("plantilla").html('<link rel="stylesheet" href="css/' + plantilla + '.css" type="text/css">')
-        }
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        $(document).ready(inicio)-->
+<!--        function inicio() {-->
+<!--            $("select").change(cambiacss)-->
+<!--        }-->
+<!--        function cambiacss() {-->
+<!--            var plantilla = $("select").attr("value");-->
+<!--            $("plantilla").html('<link rel="stylesheet" href="css/' + plantilla + '.css" type="text/css">')-->
+<!--        }-->
+<!--    </script>-->
 
 </head>
 <body>
@@ -55,7 +58,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Organización<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="ComiteOrganizador.php">Comite Organizador</a></li>
-                                <li><a href="ceremonia.html">Ceremonias</a></li>
+                                <li><a href="ceremonia.php">Ceremonias</a></li>
 
                             </ul>
                         </li>

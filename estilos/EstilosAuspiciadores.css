@@ -1,6 +1,7 @@
-﻿body {
+﻿.auspiciadores {
+    background-color: #00b3ee;
 }
-.carousel-inner {
-    height: 700px;
-    width: 100%;
-}
+/*.carousel-inner {*/
+/*    height: 700px;*/
+/*    width: 100%;*/
+/*}*/
