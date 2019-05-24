@@ -1,7 +1,16 @@
+<?php
+session_start();
+
+if ( !isset($_SESSION['user']) ){
+    header("Location: index.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+<!--    <meta charset="utf-8" />-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="./css/estilos1.css"><!-- para estilos del contador -->
@@ -14,7 +23,8 @@
 
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link href="./estilos/style.css" rel="stylesheet" />
 
@@ -59,14 +69,21 @@
                             <ul class="dropdown-menu">
                                 <li><a href="ComiteOrganizador.php">Comite Organizador</a></li>
                                 <li><a href="ceremonia.php">Ceremonias</a></li>
-
                             </ul>
                         </li>
                         <li><a href="Auspiciadores.php">Auspiciadores</a></li>
                         <li><a href="Institucional.php">Institucional</a></li>
-                        <li><a href="#">Vivo</a></li>
-                        <li><a href="#">Voluntariado</a></li>
-                        <li><a href="#">Marco legal</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Información<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./listaPaises.php">Lista de paises</a></li>
+                                <li><a href="./medallero.php">Medallero</a></li>
+                                <li><a href="ceremonia.php">Ceremonias</a></li>
+                                <li><a href="#">Vivo</a></li>
+                                <li><a href="#">Voluntariado</a></li>
+                                <li><a href="#">Marco legal</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <?php
@@ -74,7 +91,7 @@
                         ?>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="icon-user"></span><?php echo $_SESSION['user'];?></a></li>
+                            <li><a href="#"><i class="fas fa-user"></i><?php echo $_SESSION['user'];?></a></li>
                             <li><a></a></li>
                             <li><a href="#"><span class="icon-exit"></span>Cerrar Sesion</a></li>
                         </ul>
@@ -85,9 +102,9 @@
                         ?>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="icon-user"></span>Mi Perfil</a></li>
+                            <li><a href="#"><i class="fas fa-user"></i> Mi Perfil</a></li>
                             <li><a></a></li>
-                            <li><a href="#"><span class="icon-exit"></span>Cerrar Sesion</a></li>
+                            <li><a href="./cerrarSesion.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesion</a></li>
                         </ul>
 
                         <?php
