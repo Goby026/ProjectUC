@@ -40,6 +40,7 @@ $cont = 1;
                             <td><?php echo $row['NombrePais'] ?></td>
                             <td><?php echo $row['oro'] ?></td>
                             <td><?php echo $row['plata'] ?></td>
+                            <td><?php echo $row['bronce'] ?></td>
                             <td><?php echo $row['total'] ?></td>
                         </tr>
                         <?php

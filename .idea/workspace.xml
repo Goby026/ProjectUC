@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c63fb110-a717-495a-80d5-88813cc6c641" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdtecnoserv.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/conexion1.php" beforeDir="false" afterPath="$PROJECT_DIR$/conexion1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelTecnoServe.mwb" beforeDir="false" />
@@ -168,12 +169,12 @@
       <workItem from="1558584846050" duration="5143000" />
       <workItem from="1558625138514" duration="4196000" />
       <workItem from="1558668190513" duration="3718000" />
-      <workItem from="1558729810470" duration="5519000" />
+      <workItem from="1558729810470" duration="5948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26791000" />
+    <option name="totallyTimeSpent" value="27220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
