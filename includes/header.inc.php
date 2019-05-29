@@ -21,6 +21,8 @@ if ( !isset($_SESSION['user']) ){
 <!--    <link href="./estilos/EstilosLosJuegos.css" rel="stylesheet" />-->
 <!--    <link href="./estilos/EstilosInsti.css" rel="stylesheet" />-->
 
+<!--    Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Font Awesome -->
 <!--    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">-->
@@ -31,7 +33,7 @@ if ( !isset($_SESSION['user']) ){
 <!--    <link rel="stylesheet" href="./css/css.css" type="text/css">-->
 
     <link rel="icon" type="" href="./img/icon_inicio.png"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 
     <title>Weplay-Lima2019</title>
 
@@ -52,47 +54,71 @@ if ( !isset($_SESSION['user']) ){
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Weplay</a>
-                    </div>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="Home.php">Inicio</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Los Panamericanos<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="losjuegos.php">Los Juegos</a></li>
-                            </ul>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Organización<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="ComiteOrganizador.php">Comite Organizador</a></li>
-                                <li><a href="ceremonia.php">Ceremonias</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="Auspiciadores.php">Auspiciadores</a></li>
-                        <li><a href="Institucional.php">Institucional</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Información<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./listaPaises.php">Lista de paises</a></li>
-                                <li><a href="./medallero.php">Medallero</a></li>
-                                <li><a href="ceremonia.php">Ceremonias</a></li>
-                                <li><a href="#">Vivo</a></li>
-                                <li><a href="#">Voluntariado</a></li>
-                                <li><a href="#">Marco legal</a></li>
-                            </ul>
-                        </li>
-                    </ul>
 
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Weplay</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./Home.php">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Los Panamericanos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./losjuegos.php">Los Juegos</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Organización
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./ComiteOrganizador.php">Comite Organizador</a>
+                                <a class="dropdown-item" href="./ceremonia.php">Ceremonias</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Auspiciadores.php">Auspiciadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Institucional.php">Institucional</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Información
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./listaPaises.php">Lista de paises</a>
+                                <a class="dropdown-item" href="./medallero.php">Medallero</a>
+                                <a class="dropdown-item" href="./ceremonia.php">Ceremonias</a>
+                                <a class="dropdown-item" href="#">Vivo</a>
+                                <a class="dropdown-item" href="#">Voluntariado</a>
+                                <a class="dropdown-item" href="#">Marco legal</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+<!--                        </li>-->
+                    </ul>
+<!--                    <form class="form-inline my-2 my-lg-0">-->
+<!--                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--                    </form>-->
                     <?php
                     if ( isset($_SESSION['user']) && isset( $_GET['success'] ) ){
                         ?>
 
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#"><i class="fas fa-user"></i><?php echo $_SESSION['user'];?></a></li>
-                            <li><a></a></li>
                             <li><a href="#"><span class="icon-exit"></span>Cerrar Sesion</a></li>
                         </ul>
 
@@ -102,9 +128,16 @@ if ( !isset($_SESSION['user']) ){
                         ?>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><i class="fas fa-user"></i> Mi Perfil</a></li>
-                            <li><a></a></li>
-                            <li><a href="./cerrarSesion.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesion</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-user"></i> Mi Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                                <!-- Button trigger modal -->
+<!--                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--                                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión-->
+<!--                                </button>-->
+                            </li>
                         </ul>
 
                         <?php
@@ -113,6 +146,28 @@ if ( !isset($_SESSION['user']) ){
                     ?>
                 </div>
             </nav>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cerrar sesion -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cerrar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ¿Salir de la aplicación?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="./cerrarSesion.php" class="btn btn-danger">Cerrar Sesión</a>
+            </div>
         </div>
     </div>
 </div>

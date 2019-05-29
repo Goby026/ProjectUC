@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-05-2019 a las 00:12:37
+-- Tiempo de generación: 29-05-2019 a las 02:43:00
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -70,10 +70,19 @@ CREATE TABLE `categoriaasiento` (
 
 CREATE TABLE `ceremonias` (
   `idCeremonias` int(11) NOT NULL,
-  `DescripcionC` varchar(100) DEFAULT NULL,
-  `imagenC` longblob,
-  `idTipoCeremonias` int(11) DEFAULT NULL
+  `titulo` varchar(100) DEFAULT NULL,
+  `DescripcionC` text,
+  `imagenC` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ceremonias`
+--
+
+INSERT INTO `ceremonias` (`idCeremonias`, `titulo`, `DescripcionC`, `imagenC`) VALUES
+(2, 'CEREMONIAS', 'La historia deportiva comienza y finaliza <br> con espectáctulos que jamás podrás olvidar.', './images/ceremonias-lima-2019.jpg'),
+(3, 'INAUGURACIÓN', 'La cuenta regresiva agota su último grano de arena.<br> ¡Conoce a los campeones!', './images/inauguracion/inauguracion-panamericanos-lima-2019.jpg'),
+(4, 'CLAUSURA', 'La primera etapa de nuestros juegos llega a su fin. <br> ¡Celebra con nosotros!', './images/clausura/clausura-panamericanos-lima-2019.jpg');
 
 -- --------------------------------------------------------
 
@@ -596,10 +605,24 @@ CREATE TABLE `tipoauspiciadores` (
 
 CREATE TABLE `tipoceremonias` (
   `idTipoCeremonias` int(11) NOT NULL,
-  `NombreC` varchar(50) DEFAULT NULL,
-  `ImagenTipoCeremonia` longblob,
-  `descripcionTipoC` varchar(100) DEFAULT NULL
+  `NombreC` varchar(100) DEFAULT NULL,
+  `subTitulo` varchar(100) DEFAULT NULL,
+  `descripcionTipoC` text,
+  `ImagenTipoCeremonia` text,
+  `videoRef` text,
+  `idCeremonias` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipoceremonias`
+--
+
+INSERT INTO `tipoceremonias` (`idTipoCeremonias`, `NombreC`, `subTitulo`, `descripcionTipoC`, `ImagenTipoCeremonia`, `videoRef`, `idCeremonias`) VALUES
+(1, 'PRESENTACION', NULL, 'banner principal de la página', './images/ceremonias-lima-2019.jpg', 'null', 2),
+(2, 'INAUGURACIÓN PANAMERICANOS', NULL, 'La cuenta regresiva agota su último grano de arena. ¡Conoce a los campeones!', './images/ceremonias/inauguracion-pana.png', 'xs4zJsW4Ecs', 2),
+(3, 'CLAUSURA PANAMERICANOS', NULL, 'CLAUSURA PANAMERICANOS La primera etapa de nuestros juegos llega a su fin. ¡Celebra con nosotros!', './images/ceremonias/clausuras.png', 'null', 2),
+(4, 'CEREMONIA DE INAUGURACIÓN', 'INAUGURACIÓN JUEGOS PANAMERICANOS LIMA 2019', '<p>La cuenta regresiva agota su último grano de arena, los atletas tienen las ansias y esperanzas a flor de piel y tú puedes ser testigo del momento en que toda la expectativa se convierta en realidad. Acompáñanos a hacer historia en la ceremonia de inauguración de los Juegos Panamericanos Lima 2019 que, junto a los Parapanamericanos, constituyen nuestros Juegos.</p><p>Este 26 de julio, conoce a las 41 delegaciones que participarán de los Juegos Panamericanos en su primera presentación en el Estadio Nacional.</p><p>Déjate maravillar por un despliegue de más de mil artistas en escena, entre bailarines, acróbatas y músicos en vivo mientras traemos al estadio los paisajes más asombrosos del Perú e incluso Iluminamos el cielo limeño con un recuento de la historia de los Juegos Panamericanos en forma de espectáculo.</p>', './images/inauguracion/ceremonias-img3.png', 'null', 3),
+(5, 'CEREMONIA DE CLAUSURA', 'CLAUSURA JUEGOS PANAMERICANOS LIMA 2019', '<p>La pasión y el temple de nuestros atletas cosechará, como fruto del esfuerzo y dedicación, a los nuevos campeones panamericanos. Nos quedamos no solo con la memoria del mejor deporte del continente, sino con muchos nuevos récords. Solo nos queda agradecer la entrega total de estos atletas. Acompáñanos a decir \"\"hasta pronto\"\" a los Juegos Panamericanos Lima 2019.</p><p>El 11 de agosto, damos cierre a los Juegos Panamericanos en un homenaje a todos los feroces atletas que nos hicieron vivir el espíritu deportivo, una vez más en el Estadio Nacional.</p><p>Revive los momentos más increíbles de los Juegos en una ceremonia que le hará justicia al impresionante despliegue de talento de nuestros atletas. Nuevamente, es turno de los artistas para hacernos despegar de la tierra. Una ceremonia que, sin duda, coronará al rey de los eventos deportivos en América.</p>', './images/clausura/ceremonias-img2.png', 'null', 4);
 
 -- --------------------------------------------------------
 
@@ -749,8 +772,7 @@ ALTER TABLE `categoriaasiento`
 -- Indices de la tabla `ceremonias`
 --
 ALTER TABLE `ceremonias`
-  ADD PRIMARY KEY (`idCeremonias`),
-  ADD KEY `FK_Ceremonias_TipoCeremonias` (`idTipoCeremonias`);
+  ADD PRIMARY KEY (`idCeremonias`);
 
 --
 -- Indices de la tabla `comiteorganizador`
@@ -994,7 +1016,8 @@ ALTER TABLE `tipoauspiciadores`
 -- Indices de la tabla `tipoceremonias`
 --
 ALTER TABLE `tipoceremonias`
-  ADD PRIMARY KEY (`idTipoCeremonias`);
+  ADD PRIMARY KEY (`idTipoCeremonias`),
+  ADD KEY `tipoCeremonia.ceremonias_idx` (`idCeremonias`);
 
 --
 -- Indices de la tabla `tipoinstitucional`
@@ -1074,7 +1097,7 @@ ALTER TABLE `categoriaasiento`
 -- AUTO_INCREMENT de la tabla `ceremonias`
 --
 ALTER TABLE `ceremonias`
-  MODIFY `idCeremonias` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCeremonias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `comiteorganizador`
@@ -1212,7 +1235,7 @@ ALTER TABLE `moneda`
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `idPais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `idPais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `preguntasfrecuentes`
@@ -1278,7 +1301,7 @@ ALTER TABLE `tipoauspiciadores`
 -- AUTO_INCREMENT de la tabla `tipoceremonias`
 --
 ALTER TABLE `tipoceremonias`
-  MODIFY `idTipoCeremonias` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTipoCeremonias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tipoinstitucional`
@@ -1345,12 +1368,6 @@ ALTER TABLE `asientos`
 --
 ALTER TABLE `auspiciadores`
   ADD CONSTRAINT `FK_Auspiciadores_TipoAuspiciadores` FOREIGN KEY (`idTipoAuspiciador`) REFERENCES `tipoauspiciadores` (`idTipoAuspiciador`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `ceremonias`
---
-ALTER TABLE `ceremonias`
-  ADD CONSTRAINT `FK_Ceremonias_TipoCeremonias` FOREIGN KEY (`idTipoCeremonias`) REFERENCES `tipoceremonias` (`idTipoCeremonias`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `comiteorganizador`
@@ -1495,6 +1512,12 @@ ALTER TABLE `sedes`
 --
 ALTER TABLE `thistoria`
   ADD CONSTRAINT `thistoriapais` FOREIGN KEY (`idPais`) REFERENCES `pais` (`idPais`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `tipoceremonias`
+--
+ALTER TABLE `tipoceremonias`
+  ADD CONSTRAINT `tipoCeremonia.ceremonias` FOREIGN KEY (`idCeremonias`) REFERENCES `ceremonias` (`idCeremonias`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `tiposedes`

@@ -30,3 +30,9 @@
 .icon-exit:before {
   content: "\ea14";
 }
+
+.pattern-ceremonias{
+  background:url(
+  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGUlEQVQoU2NkIBIwEqmOYVQh3pAiNnj+AwALaAEK//wciwAAAABJRU5ErkJggg==
+  ) repeat;
+}

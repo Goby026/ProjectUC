@@ -17,21 +17,21 @@ include "./includes/header.inc.php"
                 </blockquote>
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card text-center">
-                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center" >
-                                <button class="btn btn-info btn-block">
-                                    CARGO
-                                </button>
-                            </div>
-                            <img src="./img/1.jpg" class="card-img-top" alt="...">
-                        </div>
-                        <div class="card-body">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur ea eligendi inventore ipsam iste maiores necessitatibus nihil, nisi, obcaecati quod quos ratione similique. At fugiat harum minima molestias saepe!
-                            </p>
-                        </div>
-                    </div>
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="card text-center">-->
+<!--                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center" >-->
+<!--                                <button class="btn btn-info btn-block">-->
+<!--                                    CARGO-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                            <img src="./img/1.jpg" class="card-img-top" alt="...">-->
+<!--                        </div>-->
+<!--                        <div class="card-body">-->
+<!--                            <p>-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur ea eligendi inventore ipsam iste maiores necessitatibus nihil, nisi, obcaecati quod quos ratione similique. At fugiat harum minima molestias saepe!-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <div class="card-group">
 

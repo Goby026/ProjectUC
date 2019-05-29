@@ -1,78 +1,116 @@
-<!doctype html>
-<html >
-<head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(inicio)
-       function inicio() {
-        $("select").change(cambiacss)
-        }
-        function cambiacss(){
-            var plantilla=$("select").attr("value");
-        $("plantilla").html('<link rel="stylesheet" href="css/'+plantilla+'.css" type="text/css">')
-     }
-</script>
-<link rel="stylesheet" href="css/css.css" type="text/css">
+<?php
+include "./includes/header.inc.php";
+include "./conexion1.php";
 
-</head>
-<body>
-        <div id="titulo">
-                <h1> CEREMONIA </h1>
-                </div>
-    <div id="contenedor">
-        <header>
-            
-        </header>
-        <section>
-            <div id="contieneformulario">
-           <p> Acto o serie de actos públicos y formales de acuerdo con 
-               reglas o ritos fijados por la ley o por la costumbre.ewe
-            fefefefef fefeerer rererere rererere rererer rerer erererer 
-        rerererer wrer ere  re rererreerre</p>
-            </div>
+$ceremonia = mysqli_query($conexion, "SELECT * FROM ceremonias WHERE idCeremonias = 2");
 
-        </section>
-        <br/>
-        <br/>
-              
-              <div class="row">
-                <div class="col-3 col-s-3 menu">
-                  <ul>
-                    <li>Ver Mas</li>
-                  </ul>
-                </div>
-              
-                <div class="col-6 col-s-9">
-                  <h2>CEREMONIA DE INAGURACION</h2>
-                  <video width="400" controls>
-                    <source src="mov_bbb.mp4" type="video/mp4">
-                    <source src="mov_bbb.ogg" type="video/ogg">
-                    Your browser does not support HTML5 video.
-                  </video>
-                </div>
-                </div>
-      
+?>
+<main>
+    <div class="container-fluid">
         <div class="row">
-                <div class="col-3 col-s-3 menu">
-                  <ul>
-                    <li>Ver Mas</li>
-                  </ul>
-                </div>
-              
-                <div class="col-6 col-s-9">
-                  <h2>CEREMONIA DE ClAUSURA</h2>
-                  <video width="400" controls>
-                    <source src="mov_bbb.mp4" type="video/mp4">
-                    <source src="mov_bbb.ogg" type="video/ogg">
-                    Your browser does not support HTML5 video.
-                  </video>
-                </div>
-                </div>
-        <div style="clear:both;"></div>
-        <footer>
-            <h6>(c)2019 Juegos Panamericanos</h6>
-        </footer>
+            <div class="col-md-12">
+<!--                <img src="./images/ceremonias-lima-2019.jpg" class="img-fluid" alt="Responsive image" style="width: 100% !important;">-->
+                <section class="row no-gutter align-items-center">
+                    <div class="col-lg-12 text-center p-0 d-flex align-items-center">
+                        <?php
+                        while( $row = mysqli_fetch_assoc($ceremonia) ){
+                        ?>
+                        <img class="img-fluid position-relative mx-auto" src="<?php echo $row['imagenC']; ?>" alt="banner ceremonias" style="width: 100% !important;">
+                        <h1 class="w-100 position-absolute text-light my-auto" style="text-align: left; margin-top: 30px !important; margin-left: 20px !important;"><?php echo $row['titulo']; ?><br><?php echo $row['DescripcionC'];?></h1>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </section>
+
+            </div>
+        </div>
     </div>
-</body>
-</html>
+    <hr>
+    <div class="container">
+        <?php
+        $tiposCeremonia = mysqli_query($conexion, "SELECT * FROM tipoceremonias where idTipoCeremonias = 2");
+        ?>
+        <div class="row">
+            <?php
+            while( $tipos = mysqli_fetch_assoc($tiposCeremonia) ){
+            ?>
+            <div class="col-md-4">
+                <div class="card" style="width: 100%;">
+                    <img src="<?php echo $tipos['ImagenTipoCeremonia']; ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title"><?php echo $tipos['NombreC']; ?></h2>
+                        <p class="card-text"><?php echo $tipos['descripcionTipoC']; ?></p>
+                        <a href="./inauguracion.php" class="btn btn-primary btn-block"> <h4>Ver mas +</h4></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/xs4zJsW4Ecs" allowfullscreen width="100%" height="95%"></iframe>
+            </div>
+            <?php
+            }
+            ?>
+        </div>
+        <hr>
+
+        <?php
+        $tiposCeremonia2 = mysqli_query($conexion, "SELECT * FROM tipoceremonias where idTipoCeremonias = 3");
+        ?>
+
+        <div class="row">
+            <?php
+            while( $tipos2 = mysqli_fetch_assoc($tiposCeremonia2) ){
+            ?>
+            <div class="col-md-12">
+                <div class="card mb-3" style="width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 card">
+                            <img src="<?php echo $tipos2['ImagenTipoCeremonia']; ?>" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8 card text-white bg-primary">
+                            <div class="card-body">
+                                <h2 class="card-title"><?php echo $tipos2['NombreC']; ?></h2>
+                                <p class="card-text"><?php echo $tipos2['descripcionTipoC']; ?></p>
+                                <a href="./clausura.php" class="btn btn-primary"><h4>Ver mas +</h4></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid pattern-ceremonias">
+        <div class="col-md-8 offset-2">
+            <section class="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <br>
+                        <h1 class="text-primary">CONVOCATORIA DE TALENTOS ARTISTICOS</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="./images/ceremonias/senoritaSaltando.png" class="img-fluid" alt="Responsive image" style="width: 100%;">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./images/ceremonias/mascota.png" class="img-fluid text-center" alt="Responsive image" style="margin-top: 20%; margin-left: 10%">
+                        <h2 class="text-primary text-center">SUMA TU PASIÓN</h2>
+                        <button class="btn btn-primary btn-block">POSTULA AQUÍ</button>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./images/ceremonias/hombreSaltando.png" class="img-fluid" alt="Responsive image" style="width: 70% !important;">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<?php
+include "./includes/footer.inc.php";
+?>
+
