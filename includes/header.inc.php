@@ -72,6 +72,7 @@ if ( !isset($_SESSION['user']) ){
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="./losjuegos.php">Los Juegos</a>
+                                <a class="dropdown-item" href="./ceremonia.php">Ceremonias</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -97,7 +98,6 @@ if ( !isset($_SESSION['user']) ){
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="./listaPaises.php">Lista de paises</a>
                                 <a class="dropdown-item" href="./medallero.php">Medallero</a>
-                                <a class="dropdown-item" href="./ceremonia.php">Ceremonias</a>
                                 <a class="dropdown-item" href="#">Vivo</a>
                                 <a class="dropdown-item" href="#">Voluntariado</a>
                                 <a class="dropdown-item" href="#">Marco legal</a>
