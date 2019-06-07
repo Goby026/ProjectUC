@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c63fb110-a717-495a-80d5-88813cc6c641" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auspiciadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/Auspiciadores.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ComiteOrganizador.php" beforeDir="false" afterPath="$PROJECT_DIR$/ComiteOrganizador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelotecnoserv_v0.2.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/modelotecnoserv_v0.2.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelotecnoserv_v0.2.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/modelotecnoserv_v0.2.mwb.bak" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +28,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ComiteOrganizador.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="651">
+              <caret line="33" column="14" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="33" selection-end-column="14" />
+              <caret line="52" column="14" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="52" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/header.inc.php">
+        <entry file="file://$PROJECT_DIR$/Auspiciadores.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="74" column="94" selection-start-line="74" selection-start-column="94" selection-end-line="74" selection-end-column="94" />
+            <state relative-caret-position="-415">
+              <caret line="92" column="41" lean-forward="true" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+              <folding>
+                <element signature="n#div#0;n#main#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/losjuegos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="47" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ceremonia.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="108" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -69,7 +94,6 @@
         <option value="$PROJECT_DIR$/conexion1.php" />
         <option value="$PROJECT_DIR$/medalleroConf.php" />
         <option value="$PROJECT_DIR$/medallero.php" />
-        <option value="$PROJECT_DIR$/Auspiciadores.php" />
         <option value="$PROJECT_DIR$/css/estilos1.css" />
         <option value="$PROJECT_DIR$/Institucional.php" />
         <option value="$PROJECT_DIR$/Home.php" />
@@ -81,8 +105,9 @@
         <option value="$PROJECT_DIR$/ceremonia.php" />
         <option value="$PROJECT_DIR$/clausura.php" />
         <option value="$PROJECT_DIR$/includes/footer.inc.php" />
-        <option value="$PROJECT_DIR$/ComiteOrganizador.php" />
         <option value="$PROJECT_DIR$/includes/header.inc.php" />
+        <option value="$PROJECT_DIR$/ComiteOrganizador.php" />
+        <option value="$PROJECT_DIR$/Auspiciadores.php" />
       </list>
     </option>
   </component>
@@ -98,6 +123,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,7 +140,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,16 +188,19 @@
       <workItem from="1559012379404" duration="10380000" />
       <workItem from="1559080136458" duration="10821000" />
       <workItem from="1559102030415" duration="1042000" />
+      <workItem from="1559184008724" duration="132000" />
+      <workItem from="1559859360006" duration="2459000" />
+      <workItem from="1559873885644" duration="5912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67035000" />
+    <option name="totallyTimeSpent" value="75538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20904645" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21638142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -343,13 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/losjuegos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="23" selection-start-line="14" selection-start-column="16" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/estilos/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
@@ -361,13 +382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auspiciadores.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -410,16 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ceremonia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="74" column="55" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clausura.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
@@ -434,6 +438,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="74" column="94" selection-start-line="74" selection-start-column="94" selection-end-line="74" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/footer.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -441,17 +452,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ComiteOrganizador.php">
+    <entry file="file://$PROJECT_DIR$/losjuegos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="504">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="47" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.inc.php">
+    <entry file="file://$PROJECT_DIR$/ceremonia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="74" column="94" selection-start-line="74" selection-start-column="94" selection-end-line="74" selection-end-column="94" />
+        <state relative-caret-position="357">
+          <caret line="17" column="108" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ComiteOrganizador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="33" selection-end-column="14" />
+          <caret line="52" column="14" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="52" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auspiciadores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415">
+          <caret line="92" column="41" lean-forward="true" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+          <folding>
+            <element signature="n#div#0;n#main#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

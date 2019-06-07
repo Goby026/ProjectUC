@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2019 a las 02:43:00
+-- Tiempo de generación: 07-06-2019 a las 06:08:04
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -45,10 +45,27 @@ CREATE TABLE `asientos` (
 
 CREATE TABLE `auspiciadores` (
   `idAuspiciadores` int(11) NOT NULL,
-  `descripcionAus` varchar(50) DEFAULT NULL,
-  `imagenE` longblob,
+  `descripcionAus` text,
+  `imagenE` text,
   `idTipoAuspiciador` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `auspiciadores`
+--
+
+INSERT INTO `auspiciadores` (`idAuspiciadores`, `descripcionAus`, `imagenE`, `idTipoAuspiciador`) VALUES
+(1, 'La popular marca de refrescos norteamericana patrocina los Juegos desde el año 1928.', './images/Auspiciadores/coca-cola.png', 1),
+(2, 'Entró a formar parte del club de marcas patrocinadoras en los Juegos olímpicos de Montreal del año 1976. Abrió el primer restaurante en China en 1990.', './images/Auspiciadores/mcdonalds.png', 2),
+(3, 'El grupo surcoreano participa en los Juegos de invierno y de verano desde las olimpiadas de Sydney 2000.', './images/Auspiciadores/samsung.jpg', 3),
+(4, 'El gigante tecnológico tuvo unos beneficios de 5.070 millones de dólares en el segundo trimestre del año, un 6% menos.', './images/Auspiciadores/ge.jpg', 4),
+(5, 'Fabricante chino de computadoras que durante el cuarto trimestre de año ha experimentado un crecimiento de sus ventas del 21%.', './images/Auspiciadores/lenovo.png', 5),
+(6, 'Es la única tarjeta de pago aceptada en las instalaciones y recintos olímpicos y paralímpicos.', './images/Auspiciadores/visa.jpg', 6),
+(7, 'Es el cronómetro oficial de los Juegos Olímpicos desde 1932.', './images/Auspiciadores/omega.png', 7),
+(8, 'Su apoyo al evento deportivo se remonta a los primeros Juegos Olímpicos modernos de Atenas, en 1896.', './images/Auspiciadores/kodak.jpg', 8),
+(9, 'La multinacional ganó 6.925 millones de dólares en el primer semestre de 2008, un 22,5% más que en 2007.', './images/Auspiciadores/j-j.jpg', 9),
+(10, 'Suministró los sistemas de sonido para los juegos de 1984 en Los Ángeles (California) y, en 1987, entró en el programa TOP.', './images/Auspiciadores/Panasonic.jpg', 10),
+(11, 'La compañía de tecnologías de la información es el socio tecnológico mundial para los Juegos.', './images/Auspiciadores/atos.jpg', 11);
 
 -- --------------------------------------------------------
 
@@ -93,12 +110,30 @@ INSERT INTO `ceremonias` (`idCeremonias`, `titulo`, `DescripcionC`, `imagenC`) V
 CREATE TABLE `comiteorganizador` (
   `idComite` int(11) NOT NULL,
   `idRepresentateORG` int(11) DEFAULT NULL,
-  `NombresR` varchar(50) DEFAULT NULL,
-  `ApellidoR` varchar(50) DEFAULT NULL,
-  `imagenR` longblob,
-  `DescripcionCO` varchar(100) DEFAULT NULL,
+  `NombresR` varchar(150) DEFAULT NULL,
+  `ApellidoR` varchar(150) DEFAULT NULL,
+  `imagenR` varchar(240) DEFAULT NULL,
+  `DescripcionCO` text,
   `idTipoRepresentante` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `comiteorganizador`
+--
+
+INSERT INTO `comiteorganizador` (`idComite`, `idRepresentateORG`, `NombresR`, `ApellidoR`, `imagenR`, `DescripcionCO`, `idTipoRepresentante`) VALUES
+(1, 1, 'CARLOS', 'NEUHAUS', './images/comite-organizador/person-man.png', 'Representante del Ministerio de Transportes y Comunicaciones', 1),
+(2, 2, 'Eduardo', 'González Chávez', './images/comite-organizador/person-man.png', 'Representante del Ministerio de Transportes y Comunicaciones', 1),
+(3, 2, 'Alejandro Gilbert', 'Moreno Bocanegra', './images/comite-organizador/person-man.png', 'Representante de la Municipalidad Metropolitana de Lima', 2),
+(4, 2, 'Fernando', 'Perera Díaz', './images/comite-organizador/person-man.png', 'Representante de la Municipalidad Metropolitana de Lima', 2),
+(5, 2, 'Dante José', 'Mandriotti Castro', './images/comite-organizador/person-man.png', 'Representante del Gobierno Regional del Callao', 3),
+(6, 3, 'Pedro', 'Del Rosario Delgado', './images/comite-organizador/person-man.png', 'Presidente del Comité Olímpico Peruano', 4),
+(7, 4, 'Jorge', 'Barrera Zegarra', './images/comite-organizador/person-man.png', 'Representante del Comité Olímpico Peruano', 4),
+(8, 5, 'Víctor', 'Aspíllaga Alayza', './images/comite-organizador/person-man.png', 'Representante del Instituto Peruano del Deporte', 5),
+(9, 6, 'Karla', 'Ayala de las Casas', './images/comite-organizador/person-woman.png', 'Representante del Ministerio de Economía y Finanzas', 2),
+(10, 7, 'José Manuel', 'Girau Mendoza', './images/comite-organizador/person-man.png', 'Representante del Ministerio de Vivienda y Construcción', 2),
+(11, 8, 'Susana Victoria', 'Córdova Avila', './images/comite-organizador/person-woman.png', 'Representante del Ministerio de Educación', 2),
+(12, 10, 'Luisa', 'Villar Gálvez', './images/comite-organizador/person-woman.png', 'Presidente de la Asociación Nacional Paralímpica del Perú', 1);
 
 -- --------------------------------------------------------
 
@@ -522,8 +557,24 @@ CREATE TABLE `reporteentrada` (
 
 CREATE TABLE `representantes` (
   `IdRepresentateORG` int(11) NOT NULL,
-  `DescripcionR` varchar(30) DEFAULT NULL
+  `DescripcionR` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `representantes`
+--
+
+INSERT INTO `representantes` (`IdRepresentateORG`, `DescripcionR`) VALUES
+(1, 'Ministerio de Transportes y Comunicaciones'),
+(2, 'Municipalidad Metropolitana de Lima'),
+(3, 'Gobierno Regional del Callao'),
+(4, 'Comité Olímpico Peruano'),
+(5, 'Instituto Peruano del Deporte'),
+(6, 'Ministerio de Economía y Finanzas'),
+(7, 'Ministerio de Vivienda y Construcción'),
+(8, 'Ministerio de Educación'),
+(9, 'Comité Olímpico Internacional'),
+(10, 'Asociación Nacional Paralímpica del Perú');
 
 -- --------------------------------------------------------
 
@@ -593,9 +644,26 @@ CREATE TABLE `thistoria` (
 
 CREATE TABLE `tipoauspiciadores` (
   `idTipoAuspiciador` int(11) NOT NULL,
-  `NomAuspiciador` varchar(100) DEFAULT NULL,
-  `imgAuspiciador` longblob
+  `NomAuspiciador` varchar(200) DEFAULT NULL,
+  `imgAuspiciador` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipoauspiciadores`
+--
+
+INSERT INTO `tipoauspiciadores` (`idTipoAuspiciador`, `NomAuspiciador`, `imgAuspiciador`) VALUES
+(1, 'COCA - COLA', './images/Auspiciadores/coca-cola.png'),
+(2, 'McDonald\'s', './images/Auspiciadores/mcdonalds.png'),
+(3, 'Samsung', './images/Auspiciadores/samsung.jpg'),
+(4, 'General Electric', './images/Auspiciadores/ge.jpg'),
+(5, 'Lenovo', './images/Auspiciadores/lenovo.png'),
+(6, 'Visa', './images/Auspiciadores/visa.jpg'),
+(7, 'Omega', './images/Auspiciadores/omega.png'),
+(8, 'Kodak', './images/Auspiciadores/kodak.jpg'),
+(9, 'Johnson & Johnson', './images/Auspiciadores/j-j.jpg'),
+(10, 'Panasonic', './images/Auspiciadores/Panasonic.jpg'),
+(11, 'Atos Origin', './images/Auspiciadores/atos.jpg');
 
 -- --------------------------------------------------------
 
@@ -680,8 +748,19 @@ CREATE TABLE `tipopregunta` (
 
 CREATE TABLE `tiporepresentante` (
   `idTipoRepresentante` int(11) NOT NULL,
-  `NombreR` varchar(50) DEFAULT NULL
+  `NombreR` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tiporepresentante`
+--
+
+INSERT INTO `tiporepresentante` (`idTipoRepresentante`, `NombreR`) VALUES
+(1, 'PRESIDENTE'),
+(2, 'REPRESENTANTE'),
+(3, 'PRESIDENTE DEL COP'),
+(4, 'REPRESENTANTE DEL COP'),
+(5, 'REPRESENTANTE DEL IPD');
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1164,7 @@ ALTER TABLE `asientos`
 -- AUTO_INCREMENT de la tabla `auspiciadores`
 --
 ALTER TABLE `auspiciadores`
-  MODIFY `idAuspiciadores` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAuspiciadores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `categoriaasiento`
@@ -1103,7 +1182,7 @@ ALTER TABLE `ceremonias`
 -- AUTO_INCREMENT de la tabla `comiteorganizador`
 --
 ALTER TABLE `comiteorganizador`
-  MODIFY `idComite` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idComite` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `compra_entrada`
@@ -1265,7 +1344,7 @@ ALTER TABLE `reporteentrada`
 -- AUTO_INCREMENT de la tabla `representantes`
 --
 ALTER TABLE `representantes`
-  MODIFY `IdRepresentateORG` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdRepresentateORG` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `sedes`
@@ -1295,7 +1374,7 @@ ALTER TABLE `thistoria`
 -- AUTO_INCREMENT de la tabla `tipoauspiciadores`
 --
 ALTER TABLE `tipoauspiciadores`
-  MODIFY `idTipoAuspiciador` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTipoAuspiciador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `tipoceremonias`
@@ -1331,7 +1410,7 @@ ALTER TABLE `tipopregunta`
 -- AUTO_INCREMENT de la tabla `tiporepresentante`
 --
 ALTER TABLE `tiporepresentante`
-  MODIFY `idTipoRepresentante` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTipoRepresentante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tiposedes`
